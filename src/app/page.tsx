@@ -10,6 +10,7 @@ import SocialProofOne from '@/components/sections/socialProof/SocialProofOne';
 import FaqSplitMedia from '@/components/sections/faq/FaqSplitMedia';
 import ContactCenter from '@/components/sections/contact/ContactCenter';
 import FooterCard from '@/components/sections/footer/FooterCard';
+import BlogCardFive from '@/components/sections/blog/BlogCardFive';
 import { Sparkles, Linkedin, Twitter, Instagram } from "lucide-react";
 
 export default function LandingPage() {
@@ -32,7 +33,7 @@ export default function LandingPage() {
           navItems={[
             { name: "About", id: "about" },
             { name: "Services", id: "services" },
-            { name: "Testimonials", id: "testimonials" },
+            { name: "Case Studies", id: "caseStudies" },
             { name: "Contact", id: "contact" }
           ]}
           button={{
@@ -48,7 +49,7 @@ export default function LandingPage() {
           description="Transform your brand's digital presence with data-driven marketing strategies that turn insights into growth. We blend creativity with analytics to deliver measurable results."
           buttons={[
             { text: "Start Your Campaign", href: "#contact" },
-            { text: "View Our Work", href: "#testimonials" }
+            { text: "View Our Work", href: "#caseStudies" }
           ]}
           layoutOrder="default"
           imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1766108011914-cqq8udnq.jpg"
@@ -102,6 +103,62 @@ export default function LandingPage() {
           ]}
           textboxLayout="default"
           useInvertedBackground="noInvert"
+        />
+      </div>
+
+      <div id="caseStudies" data-section="caseStudies">
+        <BlogCardFive
+          blogs={[
+            {
+              id: "1",
+              title: "TechVentures: 150% Lead Growth Through Integrated Digital Strategy",
+              items: ["Technology", "Q2 2024", "8 min read"],
+              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1766108015554-cpgw7aqm.jpg",
+              imageAlt: "TechVentures case study"
+            },
+            {
+              id: "2",
+              title: "InnovateLab: Rebranding and Audience Engagement Campaign",
+              items: ["Branding", "Q1 2024", "6 min read"],
+              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1766108016849-vla4lcjp.jpg",
+              imageAlt: "InnovateLab case study"
+            },
+            {
+              id: "3",
+              title: "GrowthCo: Data-Driven Storytelling for Startup Scaling",
+              items: ["Startups", "Q4 2023", "7 min read"],
+              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1766108017475-ly5znpjh.jpg",
+              imageAlt: "GrowthCo case study"
+            },
+            {
+              id: "4",
+              title: "StartupHub: Multi-Channel Campaign with 300% ROI Increase",
+              items: ["Digital Marketing", "Q3 2023", "9 min read"],
+              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1766108018483-ghdpc926.jpg",
+              imageAlt: "StartupHub case study"
+            },
+            {
+              id: "5",
+              title: "EcommercePro: E-commerce Optimization and Conversion Strategy",
+              items: ["E-commerce", "Q2 2023", "7 min read"],
+              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1766108019440-1za3o13c.jpg",
+              imageAlt: "EcommercePro case study"
+            },
+            {
+              id: "6",
+              title: "FinanceFlow: B2B Content Marketing and Thought Leadership",
+              items: ["Finance", "Q1 2023", "8 min read"],
+              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1766108020436-cf8l0rz9.jpg",
+              imageAlt: "FinanceFlow case study"
+            }
+          ]}
+          animationType="slide-up"
+          variant="card"
+          title="Featured Case Studies"
+          description="Explore how we've helped leading brands achieve transformative results through strategic marketing."
+          textboxLayout="default"
+          useInvertedBackground="noInvert"
+          tag="Our Work"
         />
       </div>
 
