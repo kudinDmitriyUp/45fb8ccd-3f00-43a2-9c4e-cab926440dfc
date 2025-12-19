@@ -2,7 +2,7 @@
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarLayoutFloatingOverlay from '@/components/navbar/NavbarLayoutFloatingOverlay/NavbarLayoutFloatingOverlay';
-import HeroLogoBillboardSplit from '@/components/sections/hero/HeroLogoBillboardSplit';
+import HeroCarouselLogo from '@/components/sections/hero/heroCarouselLogo/HeroCarouselLogo';
 import InlineImageSplitTextAbout from '@/components/sections/about/InlineImageSplitTextAbout';
 import FeatureCardFourteen from '@/components/sections/feature/FeatureCardFourteen';
 import TestimonialCardNine from '@/components/sections/testimonial/TestimonialCardNine';
@@ -44,17 +44,28 @@ export default function LandingPage() {
       </div>
 
       <div id="hero" data-section="hero">
-        <HeroLogoBillboardSplit
+        <HeroCarouselLogo
           logoText="MarketFlow"
           description="Transform your brand's digital presence with data-driven marketing strategies that turn insights into growth. We blend creativity with analytics to deliver measurable results."
           buttons={[
             { text: "Start Your Campaign", href: "#contact" },
             { text: "View Our Work", href: "#caseStudies" }
           ]}
-          layoutOrder="default"
-          imageSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1766108011914-cqq8udnq.jpg"
-          imageAlt="Marketing team collaborating on digital strategy"
-          frameStyle="browser"
+          slides={[
+            {
+              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1766108011914-cqq8udnq.jpg",
+              imageAlt: "Marketing team collaborating on digital strategy"
+            },
+            {
+              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1766108012991-ym70dgzm.jpg",
+              imageAlt: "Strategic marketing planning"
+            },
+            {
+              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1766108013806-ag90gg69.jpg",
+              imageAlt: "Content creation process"
+            }
+          ]}
+          autoplayDelay={4000}
         />
       </div>
 
@@ -111,49 +122,67 @@ export default function LandingPage() {
           blogs={[
             {
               id: "1",
+              tags: ["Technology", "Q2 2024", "8 min read"],
               title: "TechVentures: 150% Lead Growth Through Integrated Digital Strategy",
-              items: ["Technology", "Q2 2024", "8 min read"],
+              excerpt: "Discover how we implemented a comprehensive digital strategy that resulted in 150% lead growth and improved brand visibility.",
               imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1766108015554-cpgw7aqm.jpg",
-              imageAlt: "TechVentures case study"
+              imageAlt: "TechVentures case study",
+              authorName: "MarketFlow Team",
+              date: "Q2 2024"
             },
             {
               id: "2",
+              tags: ["Branding", "Q1 2024", "6 min read"],
               title: "InnovateLab: Rebranding and Audience Engagement Campaign",
-              items: ["Branding", "Q1 2024", "6 min read"],
+              excerpt: "Learn how strategic rebranding and targeted engagement campaigns helped InnovateLab connect with their audience.",
               imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1766108016849-vla4lcjp.jpg",
-              imageAlt: "InnovateLab case study"
+              imageAlt: "InnovateLab case study",
+              authorName: "MarketFlow Team",
+              date: "Q1 2024"
             },
             {
               id: "3",
+              tags: ["Startups", "Q4 2023", "7 min read"],
               title: "GrowthCo: Data-Driven Storytelling for Startup Scaling",
-              items: ["Startups", "Q4 2023", "7 min read"],
+              excerpt: "Explore how data-driven storytelling techniques accelerated GrowthCo's market expansion and customer acquisition.",
               imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1766108017475-ly5znpjh.jpg",
-              imageAlt: "GrowthCo case study"
+              imageAlt: "GrowthCo case study",
+              authorName: "MarketFlow Team",
+              date: "Q4 2023"
             },
             {
               id: "4",
+              tags: ["Digital Marketing", "Q3 2023", "9 min read"],
               title: "StartupHub: Multi-Channel Campaign with 300% ROI Increase",
-              items: ["Digital Marketing", "Q3 2023", "9 min read"],
+              excerpt: "See how our multi-channel marketing approach delivered exceptional ROI and brand awareness for StartupHub.",
               imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1766108018483-ghdpc926.jpg",
-              imageAlt: "StartupHub case study"
+              imageAlt: "StartupHub case study",
+              authorName: "MarketFlow Team",
+              date: "Q3 2023"
             },
             {
               id: "5",
+              tags: ["E-commerce", "Q2 2023", "7 min read"],
               title: "EcommercePro: E-commerce Optimization and Conversion Strategy",
-              items: ["E-commerce", "Q2 2023", "7 min read"],
+              excerpt: "Discover how strategic optimization techniques increased conversion rates and customer lifetime value for EcommercePro.",
               imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1766108019440-1za3o13c.jpg",
-              imageAlt: "EcommercePro case study"
+              imageAlt: "EcommercePro case study",
+              authorName: "MarketFlow Team",
+              date: "Q2 2023"
             },
             {
               id: "6",
+              tags: ["Finance", "Q1 2023", "8 min read"],
               title: "FinanceFlow: B2B Content Marketing and Thought Leadership",
-              items: ["Finance", "Q1 2023", "8 min read"],
+              excerpt: "Learn how thought leadership content positioning established FinanceFlow as an industry authority.",
               imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1766108020436-cf8l0rz9.jpg",
-              imageAlt: "FinanceFlow case study"
+              imageAlt: "FinanceFlow case study",
+              authorName: "MarketFlow Team",
+              date: "Q1 2023"
             }
           ]}
           animationType="slide-up"
-          variant="card"
+          containerStyle="default"
           title="Featured Case Studies"
           description="Explore how we've helped leading brands achieve transformative results through strategic marketing."
           textboxLayout="default"
@@ -167,38 +196,39 @@ export default function LandingPage() {
           testimonials={[
             {
               id: "1",
-              quote: "MarketFlow transformed our digital presence. Their strategic approach and creative execution helped us increase leads by 150% in just six months.",
               name: "Sarah Johnson",
               role: "CEO at TechVentures",
+              testimonial: "MarketFlow transformed our digital presence. Their strategic approach and creative execution helped us increase leads by 150% in just six months.",
               imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1766108015554-cpgw7aqm.jpg",
               imageAlt: "Sarah Johnson CEO"
             },
             {
               id: "2",
-              quote: "Working with this team has been exceptional. They understood our brand voice and delivered campaigns that actually connected with our audience.",
               name: "Michael Chen",
               role: "Marketing Director at InnovateLab",
+              testimonial: "Working with this team has been exceptional. They understood our brand voice and delivered campaigns that actually connected with our audience.",
               imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1766108016849-vla4lcjp.jpg",
               imageAlt: "Michael Chen Director"
             },
             {
               id: "3",
-              quote: "Their data-driven approach combined with creative storytelling is exactly what our brand needed. Highly professional and results-oriented.",
               name: "Emily Rodriguez",
               role: "Founder at GrowthCo",
+              testimonial: "Their data-driven approach combined with creative storytelling is exactly what our brand needed. Highly professional and results-oriented.",
               imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1766108017475-ly5znpjh.jpg",
               imageAlt: "Emily Rodriguez Founder"
             },
             {
               id: "4",
-              quote: "Fantastic team to work with. They're proactive, responsive, and genuinely invested in our success. Our ROI has never been better.",
               name: "David Kim",
               role: "Business Owner at StartupHub",
+              testimonial: "Fantastic team to work with. They're proactive, responsive, and genuinely invested in our success. Our ROI has never been better.",
               imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1766108018483-ghdpc926.jpg",
               imageAlt: "David Kim Owner"
             }
           ]}
-          variant="card"
+          animationType="slide-up"
+          containerStyle="default"
           title="What Our Clients Say"
           description="Trusted by leading brands to deliver marketing excellence"
           textboxLayout="default"
@@ -217,11 +247,11 @@ export default function LandingPage() {
             "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1766108025010-vuu3ki39.jpg",
             "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1766108025868-oq1w3a6o.jpg"
           ]}
+          animationType="slide-up"
           title="Trusted by Industry Leaders"
           description="Partner with brands that drive results and innovation in their markets"
           textboxLayout="default"
           useInvertedBackground="noInvert"
-          showCard={true}
         />
       </div>
 
