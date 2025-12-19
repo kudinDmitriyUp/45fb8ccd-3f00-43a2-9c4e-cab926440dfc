@@ -2,7 +2,7 @@
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarLayoutFloatingOverlay from '@/components/navbar/NavbarLayoutFloatingOverlay/NavbarLayoutFloatingOverlay';
-import HeroLogoBillboardSplit from '@/components/sections/hero/HeroLogoBillboardSplit';
+import HeroCarouselLogo from '@/components/sections/hero/heroCarouselLogo/HeroCarouselLogo';
 import InlineImageSplitTextAbout from '@/components/sections/about/InlineImageSplitTextAbout';
 import FeatureCardFourteen from '@/components/sections/feature/FeatureCardFourteen';
 import TestimonialCardNine from '@/components/sections/testimonial/TestimonialCardNine';
@@ -44,15 +44,28 @@ export default function LandingPage() {
       </div>
 
       <div id="hero" data-section="hero">
-        <HeroLogoBillboardSplit
+        <HeroCarouselLogo
           logoText="MarketFlow"
           description="Transform your brand's digital presence with data-driven marketing strategies that turn insights into growth. We blend creativity with analytics to deliver measurable results."
           buttons={[
             { text: "Start Your Campaign", href: "#contact" },
             { text: "View Our Work", href: "#caseStudies" }
           ]}
-          backgroundImage="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1766108011914-cqq8udnq.jpg"
-          backgroundImageAlt="Marketing strategy planning"
+          slides={[
+            {
+              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1766108011914-cqq8udnq.jpg",
+              imageAlt: "Marketing strategy planning"
+            },
+            {
+              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1766108012991-ym70dgzm.jpg",
+              imageAlt: "Strategic marketing planning"
+            },
+            {
+              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1766108013806-ag90gg69.jpg",
+              imageAlt: "Content creation process"
+            }
+          ]}
+          autoplayDelay={4000}
         />
       </div>
 
@@ -161,7 +174,7 @@ export default function LandingPage() {
               authorName: "MarketFlow Team",
               date: "Q1 2023"
             }
-          ]}
+          ]
           animationType="slide-up"
           containerStyle="default"
           title="Featured Case Studies"
@@ -207,7 +220,7 @@ export default function LandingPage() {
               imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1766108018483-ghdpc926.jpg",
               imageAlt: "David Kim Owner"
             }
-          ]}
+          ]
           animationType="slide-up"
           containerStyle="default"
           title="What Our Clients Say"
@@ -227,7 +240,7 @@ export default function LandingPage() {
             "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1766108024422-rvmx5rxu.jpg",
             "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1766108025010-vuu3ki39.jpg",
             "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1766108025868-oq1w3a6o.jpg"
-          ]}
+          ]
           animationType="slide-up"
           title="Trusted by Industry Leaders"
           description="Partner with brands that drive results and innovation in their markets"
@@ -272,7 +285,7 @@ export default function LandingPage() {
               title: "How often will we communicate?",
               content: "It depends on your plan. Starter plans include monthly check-ins, Professional includes bi-weekly calls, and Enterprise includes weekly strategy sessions."
             }
-          ]}
+          ]
           textboxLayout="default"
           useInvertedBackground="noInvert"
           mediaPosition="left"
