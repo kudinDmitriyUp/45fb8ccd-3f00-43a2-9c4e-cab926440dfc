@@ -2,7 +2,7 @@
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarLayoutFloatingOverlay from '@/components/navbar/NavbarLayoutFloatingOverlay/NavbarLayoutFloatingOverlay';
-import HeroLogoBillboardSplit from '@/components/sections/hero/HeroLogoBillboardSplit';
+import HeroCarouselLogo from '@/components/sections/hero/heroCarouselLogo/HeroCarouselLogo';
 import InlineImageSplitTextAbout from '@/components/sections/about/InlineImageSplitTextAbout';
 import FeatureCardFourteen from '@/components/sections/feature/FeatureCardFourteen';
 import TestimonialCardNine from '@/components/sections/testimonial/TestimonialCardNine';
@@ -44,13 +44,19 @@ export default function LandingPage() {
       </div>
 
       <div id="hero" data-section="hero">
-        <HeroLogoBillboardSplit
+        <HeroCarouselLogo
           logoText="MarketFlow"
           description="Transform your brand's digital presence with data-driven marketing strategies that turn insights into growth. We blend creativity with analytics to deliver measurable results."
           buttons={[
             { text: "Start Your Campaign", href: "#contact" },
             { text: "View Our Work", href: "#caseStudies" }
           ]}
+          slides={[
+            { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1766108011914-cqq8udnq.jpg", imageAlt: "Marketing strategy planning" },
+            { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1766108012991-ym70dgzm.jpg", imageAlt: "Data analytics dashboard" },
+            { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1766108013806-ag90gg69.jpg", imageAlt: "Creative campaign development" }
+          ]}
+          autoplayDelay={5000}
         />
       </div>
 
