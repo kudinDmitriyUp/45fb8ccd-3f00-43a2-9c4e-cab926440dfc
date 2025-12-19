@@ -2,7 +2,7 @@
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarLayoutFloatingOverlay from '@/components/navbar/NavbarLayoutFloatingOverlay/NavbarLayoutFloatingOverlay';
-import HeroCarouselLogo from '@/components/sections/hero/heroCarouselLogo/HeroCarouselLogo';
+import HeroLogoBillboardSplit from '@/components/sections/hero/HeroLogoBillboardSplit';
 import InlineImageSplitTextAbout from '@/components/sections/about/InlineImageSplitTextAbout';
 import FeatureCardFourteen from '@/components/sections/feature/FeatureCardFourteen';
 import TestimonialCardNine from '@/components/sections/testimonial/TestimonialCardNine';
@@ -44,19 +44,15 @@ export default function LandingPage() {
       </div>
 
       <div id="hero" data-section="hero">
-        <HeroCarouselLogo
+        <HeroLogoBillboardSplit
           logoText="MarketFlow"
           description="Transform your brand's digital presence with data-driven marketing strategies that turn insights into growth. We blend creativity with analytics to deliver measurable results."
           buttons={[
             { text: "Start Your Campaign", href: "#contact" },
             { text: "View Our Work", href: "#caseStudies" }
           ]}
-          slides={[
-            { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1766108011914-cqq8udnq.jpg", imageAlt: "Marketing strategy planning" },
-            { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1766108012991-ym70dgzm.jpg", imageAlt: "Data analytics dashboard" },
-            { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1766108013806-ag90gg69.jpg", imageAlt: "Creative campaign development" }
-          ]}
-          autoplayDelay={5000}
+          backgroundImage="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1766108011914-cqq8udnq.jpg"
+          backgroundImageAlt="Marketing strategy planning"
         />
       </div>
 
@@ -114,7 +110,7 @@ export default function LandingPage() {
             {
               id: "1",
               title: "TechVentures: 150% Lead Growth Through Integrated Digital Strategy",
-              excerpt: "Discover how we implemented a comprehensive digital strategy that resulted in 150% lead growth and improved brand visibility.",
+              description: "Discover how we implemented a comprehensive digital strategy that resulted in 150% lead growth and improved brand visibility.",
               imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1766108015554-cpgw7aqm.jpg",
               imageAlt: "TechVentures case study",
               authorName: "MarketFlow Team",
@@ -123,7 +119,7 @@ export default function LandingPage() {
             {
               id: "2",
               title: "InnovateLab: Rebranding and Audience Engagement Campaign",
-              excerpt: "Learn how strategic rebranding and targeted engagement campaigns helped InnovateLab connect with their audience.",
+              description: "Learn how strategic rebranding and targeted engagement campaigns helped InnovateLab connect with their audience.",
               imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1766108016849-vla4lcjp.jpg",
               imageAlt: "InnovateLab case study",
               authorName: "MarketFlow Team",
@@ -132,7 +128,7 @@ export default function LandingPage() {
             {
               id: "3",
               title: "GrowthCo: Data-Driven Storytelling for Startup Scaling",
-              excerpt: "Explore how data-driven storytelling techniques accelerated GrowthCo's market expansion and customer acquisition.",
+              description: "Explore how data-driven storytelling techniques accelerated GrowthCo's market expansion and customer acquisition.",
               imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1766108017475-ly5znpjh.jpg",
               imageAlt: "GrowthCo case study",
               authorName: "MarketFlow Team",
@@ -141,7 +137,7 @@ export default function LandingPage() {
             {
               id: "4",
               title: "StartupHub: Multi-Channel Campaign with 300% ROI Increase",
-              excerpt: "See how our multi-channel marketing approach delivered exceptional ROI and brand awareness for StartupHub.",
+              description: "See how our multi-channel marketing approach delivered exceptional ROI and brand awareness for StartupHub.",
               imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1766108018483-ghdpc926.jpg",
               imageAlt: "StartupHub case study",
               authorName: "MarketFlow Team",
@@ -150,7 +146,7 @@ export default function LandingPage() {
             {
               id: "5",
               title: "EcommercePro: E-commerce Optimization and Conversion Strategy",
-              excerpt: "Discover how strategic optimization techniques increased conversion rates and customer lifetime value for EcommercePro.",
+              description: "Discover how strategic optimization techniques increased conversion rates and customer lifetime value for EcommercePro.",
               imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1766108019440-1za3o13c.jpg",
               imageAlt: "EcommercePro case study",
               authorName: "MarketFlow Team",
@@ -159,7 +155,7 @@ export default function LandingPage() {
             {
               id: "6",
               title: "FinanceFlow: B2B Content Marketing and Thought Leadership",
-              excerpt: "Learn how thought leadership content positioning established FinanceFlow as an industry authority.",
+              description: "Learn how thought leadership content positioning established FinanceFlow as an industry authority.",
               imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1766108020436-cf8l0rz9.jpg",
               imageAlt: "FinanceFlow case study",
               authorName: "MarketFlow Team",
