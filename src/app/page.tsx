@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarLayoutFloatingOverlay from '@/components/navbar/NavbarLayoutFloatingOverlay/NavbarLayoutFloatingOverlay';
@@ -7,7 +7,6 @@ import InlineImageSplitTextAbout from '@/components/sections/about/InlineImageSp
 import FeatureCardFourteen from '@/components/sections/feature/FeatureCardFourteen';
 import TestimonialCardNine from '@/components/sections/testimonial/TestimonialCardNine';
 import SocialProofOne from '@/components/sections/socialProof/SocialProofOne';
-import PricingCardSeven from '@/components/sections/pricing/PricingCardSeven';
 import FaqSplitMedia from '@/components/sections/faq/FaqSplitMedia';
 import ContactCenter from '@/components/sections/contact/ContactCenter';
 import FooterCard from '@/components/sections/footer/FooterCard';
@@ -34,7 +33,6 @@ export default function LandingPage() {
             { name: "About", id: "about" },
             { name: "Services", id: "services" },
             { name: "Testimonials", id: "testimonials" },
-            { name: "Pricing", id: "pricing" },
             { name: "Contact", id: "contact" }
           ]}
           button={{
@@ -167,93 +165,6 @@ export default function LandingPage() {
           textboxLayout="default"
           useInvertedBackground="noInvert"
           showCard={true}
-        />
-      </div>
-
-      <div id="pricing" data-section="pricing">
-        <PricingCardSeven
-          title="Transparent Pricing Plans"
-          description="Choose the right marketing package for your business needs and growth stage"
-          tag="Pricing"
-          tagIcon={Sparkles}
-          plans={[
-            {
-              id: "starter",
-              tag: "PERFECT FOR STARTUPS",
-              pricingOptions: [
-                {
-                  value: "monthly",
-                  label: "Monthly",
-                  price: "$2,500",
-                  subtitle: "Per Month"
-                },
-                {
-                  value: "quarterly",
-                  label: "Quarterly",
-                  price: "$6,750",
-                  subtitle: "Per Quarter"
-                }
-              ],
-              defaultOption: "monthly",
-              selectorNote: "Save 10% with quarterly billing",
-              description: "Social media management, basic analytics, monthly strategy reviews, and email marketing support.",
-              buttons: [
-                { text: "Get Started", href: "#contact" }
-              ]
-            },
-            {
-              id: "professional",
-              tag: "MOST POPULAR",
-              pricingOptions: [
-                {
-                  value: "monthly",
-                  label: "Monthly",
-                  price: "$5,500",
-                  subtitle: "Per Month"
-                },
-                {
-                  value: "quarterly",
-                  label: "Quarterly",
-                  price: "$14,850",
-                  subtitle: "Per Quarter"
-                }
-              ],
-              defaultOption: "monthly",
-              selectorNote: "Save 10% with quarterly billing",
-              description: "Full social media management, content creation, advanced analytics, paid advertising campaigns, and bi-weekly strategy calls.",
-              buttons: [
-                { text: "Start Growing", href: "#contact" }
-              ]
-            },
-            {
-              id: "enterprise",
-              tag: "FOR AMBITIOUS BRANDS",
-              pricingOptions: [
-                {
-                  value: "monthly",
-                  label: "Monthly",
-                  price: "$9,999",
-                  subtitle: "Per Month"
-                },
-                {
-                  value: "annual",
-                  label: "Annual",
-                  price: "$99,990",
-                  subtitle: "Per Year"
-                }
-              ],
-              defaultOption: "monthly",
-              selectorNote: "Save 17% with annual billing",
-              description: "Complete marketing suite with dedicated team, multi-channel campaigns, brand strategy development, weekly calls, and custom analytics dashboards.",
-              buttons: [
-                { text: "Schedule Consultation", href: "#contact" }
-              ]
-            }
-          ]}
-          animationType="slide-up"
-          containerStyle="default"
-          textboxLayout="default"
-          useInvertedBackground="noInvert"
         />
       </div>
 
